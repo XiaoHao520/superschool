@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_print_upload"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:overScrollMode="always"
+    tools:context="com.superschool.activity.PrintUploadActivity">
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/storeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="西9-218打印室"
+            android:textAlignment="center"
+            android:textSize="80px" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/nameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100px"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:id="@+id/PersonName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收货人姓名:" />
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="必填"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addressLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nameLayout"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/PersonAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收货人地址:" />
+
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="必填" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/telLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addressLayout"
+                android:orientation="horizontal"
+
+                >
+
+
+                <TextView
+                    android:id="@+id/PersonTel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收货人电话:"
+
+                    />
+
+                <EditText
+                    android:id="@+id/tel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="必填" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/transferLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/telLayout"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/transfer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="需要配送吗？" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/transferYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="是" />
+
+                    <RadioButton
+                        android:id="@+id/transferNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="否" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:id="@+id/markLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/transferLayout"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/PersonMark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="0px"
+                    android:text="备              注:" />
+
+                <EditText
+                    android:id="@+id/mark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10px"
+                    android:background="@drawable/border"
+                    android:hint="此项不填则代表，全部单面打印！"
+                    android:inputType="textMultiLine"
+                    android:lines="5"
+                    android:maxLines="5" />
+            </LinearLayout>
+
+            <com.superschool.customeLayout.customeFlowLayout.FlowLayout
+                android:id="@+id/addFiles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/markLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100px"
+                android:background="@drawable/border"
+
+                >
+
+                <ImageButton
+                    android:id="@+id/selectFile"
+                    android:layout_width="100px"
+                    android:layout_height="100px"
+                    android:background="@drawable/add" />
+
+
+            </com.superschool.customeLayout.customeFlowLayout.FlowLayout>
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addFiles"
+                android:text="提交" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/submit"
+                android:text="注：灰印：单面0.25元/张，双面0.45元/张；彩印：0.8元/面；相片：A4-5元/张，6寸-2.5元，证件照每版9张大小1寸照-2.5元/版；如需配送配送费0.5元。"
+                android:textColor="@color/colorAccent" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
+

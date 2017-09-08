@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="100px"
+            android:padding="20px"
+            android:text="订单号："
+            android:textSize="50px" />
+        <TextView
+            android:id="@+id/orderId"
+            android:layout_width="wrap_content"
+            android:layout_height="100px"
+            android:text="订单号："
+            android:textSize="50px" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:paddingLeft="20px"
+        android:paddingRight="20px">
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="时间："/>
+
+        <TextView
+
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017/7/7"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/date" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未完成"
+            android:layout_alignBaseline="@+id/finished"
+            android:layout_alignBottom="@+id/finished"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/finished"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="状态："
+            android:layout_alignBaseline="@+id/from"
+            android:layout_alignBottom="@+id/from"
+            android:layout_toStartOf="@+id/status"
+       />
+
+    </RelativeLayout>
+</LinearLayout>

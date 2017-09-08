@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/print_store"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.superschool.activity.ChatingActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="130px"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="100px"
+            android:layout_height="100px"
+
+            android:layout_centerVertical="true"
+            android:src="@drawable/retrun" />
+
+        <TextView
+            android:id="@+id/toChatingUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="userName"
+            android:textSize="60px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:divider="@null"
+            android:transcriptMode="normal"
+            android:fastScrollEnabled="true"
+            android:id="@+id/chatList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/make"
+            android:layout_weight="1.25"
+          >
+        </ListView>
+        <LinearLayout
+
+
+            android:id="@+id/make"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+            <EditText
+                android:maxLength="1000"
+                android:id="@+id/msgEdText"
+                android:layout_marginLeft="20px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+
+            <Button
+                android:id="@+id/send"
+                android:layout_width="wrap_content"
+                android:layout_height="150px"
+                android:layout_marginLeft="40px"
+                android:padding="0px"
+                android:text="发送" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

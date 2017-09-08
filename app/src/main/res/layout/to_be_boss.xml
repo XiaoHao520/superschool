@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_to_be_boss"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.superschool.activity.ToBeBossActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130px"
+            android:background="@color/colorAccent">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/back"
+                android:layout_width="50px"
+                android:layout_height="100px"
+                android:background="@drawable/retrun" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="申请我的业务"
+                android:textSize="60px"  />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100px">
+
+            <TextView
+                android:id="@+id/agreementText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="协议："
+
+                />
+
+            <TextView
+                android:id="@+id/agreementContent"
+                android:layout_width="match_parent"
+
+                android:layout_height="400px"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="50px"
+                android:layout_toEndOf="@+id/agreementText"
+                android:layout_toRightOf="@+id/agreementText"
+                android:text="@string/large_text" />
+
+            <CheckBox
+                android:id="@+id/agree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/agreementContent"
+                android:layout_centerHorizontal="true"
+                android:text="我同意以上协议" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请选择业务类型：" />
+
+            <Spinner
+                android:id="@+id/typeOfBusiness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请选择证件类型:" />
+
+            <Spinner
+                android:id="@+id/typeOfPaper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请输入证件号：" />
+
+            <EditText
+                android:id="@+id/numOfPaper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请上传证件照片（正反面）" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200px"
+                android:background="@color/colorAccent">
+
+                <ImageButton
+                    android:id="@+id/addPaperPhoto"
+                    android:layout_width="150px"
+                    android:layout_height="150px"
+                    android:background="@drawable/add" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="200px"
+               >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="店  铺  名:"
+
+                    />
+                <EditText
+                    android:id="@+id/storeName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150px"
+                 />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="200px"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="业务描述:"
+
+                    />
+                <EditText
+                    android:id="@+id/storeInfo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150px"
+                    android:lines="3"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/pickPosition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请在点击这里，并在地图上选取位置作为您的店铺信息"
+                    />
+
+                <TextView
+
+                    android:hint="当前位置信息"
+                    android:id="@+id/locationInfo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150px"
+                    android:lines="3"
+                    />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="把当前地理信息标记为店铺位置"
+                    android:id="@+id/currentLocationAsStoreLocation"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <Button
+            android:id="@+id/submitBusinessApply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="提交申请" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

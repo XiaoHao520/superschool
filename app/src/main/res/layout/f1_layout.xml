@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="0px">
+
+    <RelativeLayout
+
+        android:layout_marginTop="70px"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@color/colorAccent">
+
+        <TextView
+
+            android:id="@+id/wetherText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/locationText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/locationText"
+            android:layout_centerVertical="true"
+
+            android:text="天气"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/locationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="正在获取....." />
+
+        <Button
+            android:id="@+id/userLogin"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="0px"
+            android:background="@drawable/user"
+            android:padding="0px"
+            android:textSize="10dp"
+
+
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.amap.api.maps2d.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </com.amap.api.maps2d.MapView>
+
+       <!-- <Button
+            android:id="@+id/getLocation"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="100px"
+            android:background="@drawable/mypos" />-->
+    </RelativeLayout>
+</LinearLayout>

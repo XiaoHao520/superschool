@@ -1,0 +1,30 @@
+用户信息表：myInfo
+学生超市表：studentstore；
+SharedPreference:
+本地信息：local    里面的属性：latitude longitude wether school
+用户：user:username,userID,password ,
+
+
+sqlite:
+
+用户登录:login
+
+
+我们的业务类型分别有：打印，超市，跑腿
+
+
+未读信息：noRead
+TO_FIRSTFRAGMENT=1;
+
+订单ID= 极光用户ID+年月日时分秒
+订单状态：未完成，处理中，已送。
+
+
+自定义消息的 类型contentType:resultMsg,orderMsg,chatMsg
+结果类型resultType：handling
+
+
+ON_CLICK_ITEM_DOING = 646;
+
+"com.superschool.chatmsg"
+    private String appkey = "b2b2aa47bae76270d275879b";

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/test_jmessage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.superschool.jmessagetest.TestJMessageActivity">
+    <EditText
+        android:hint="username"
+        android:layout_marginTop="20px"
+        android:id="@+id/username"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:hint="password"
+        android:layout_marginTop="20px"
+        android:id="@+id/password"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:hint="conversation"
+        android:layout_marginTop="20px"
+        android:id="@+id/conversation"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+
+        android:layout_height="wrap_content"
+        android:hint="msg"
+        android:layout_marginTop="20px"
+        android:background="@color/colorAccent"
+        android:id="@+id/msg"
+        android:layout_width="match_parent"
+      />
+    <Button
+        android:layout_marginTop="5px"
+        android:text="进入单聊会话"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/enterSingleConversation"
+    />
+    <Button
+
+        android:text="发送"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/send"
+    />
+    <Button
+        android:text="登录"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/login"
+    />
+
+    <Button
+        android:layout_marginTop="5px"
+        android:text="添加好友"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/addFriends"
+      />
+    <Button
+        android:layout_marginTop="5px"
+        android:text="接受添加好友"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/allowAdd"
+    />
+
+</LinearLayout>
